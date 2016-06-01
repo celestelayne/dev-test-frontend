@@ -3,14 +3,21 @@
 	padding: 0; 
 }
 
-body {
-
+html, body {
+	height: 100%;
+	margin: auto;
 }
+
+thead {
+	text-transform: uppercase;
+}
+
+/*********** OTHER STYLES ***********/
 
 .thumb {
 	position: relative;
-	width: 60px;
-	height: 60px;
+	width: 80px;
+	height: 80px;
 	background-position: center center;
 	background-repeat: no-repeat;
 	overflow: hidden;
@@ -25,4 +32,8 @@ body {
   -webkit-transform: translate(-50%,-50%);
       -ms-transform: translate(-50%,-50%);
           transform: translate(-50%,-50%);
+}
+
+.door {
+	visibility: visible;
 }

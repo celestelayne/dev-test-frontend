@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Document</title>
+	<!-- table sorter -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.26.2/css/theme.default.min.css"> -->
+	<!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize CSS CDN -->
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  <!-- Application Stylesheet -->
+	<link rel="stylesheet" href="styles.css">  
+</head>
+<body>
+	<div class="container">
+		<table id="results" class="pagination bordered highlight">
+			<script id="article-template" type="text/x-handlebars-template">		
+			<thead>
+				<tr class="blue-text text-darken-2">
+					<th colspan="2">Unpublished Articles</th>
+					<th>Author</th>
+					<th>Words</th>
+					<th>Submitted</th>
+				</tr>
+			</thead>
+
+	    <tbody>
+					{{#each article}} 
+						<tr class="articleRow">
+							<td class="thumb">
+								<span><img src="{{image}}" /></span>
+							</td>
+							<td><a href="{{link}}">{{title}}</a></td>
+							<td>{{author}}</td>
+				    	<td>{{words}}</td>
+							<td>{{submitted}}</td>
+						</tr>	
+					{{/each}}
+	    </tbody>
+	    </script>
+	  </table>
+	</div>
+	<!-- jquery -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<!-- timeago -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.5.2/jquery.timeago.js" type="text/javascript"></script>
+	<!-- table sorter -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.26.2/js/jquery.tablesorter.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.26.2/js/jquery.tablesorter.widgets.min.js"></script>
+	<!-- handlebars -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+	<!-- materialize -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+	<!-- custom javasctipt -->
+	<script type="text/javascript" src="article.js"></script>
+</body>
+</html>
