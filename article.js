@@ -88,7 +88,6 @@
 			// console.log($button);
 			$button.bind('click', function(){
 				$("tr:hidden").slice(currentPage * numPerPage, (currentPage + 1) * numPerPage).show();
-				// $(this).slice($("tr:hidden").first().index(),10).show();
 			});
 			// Add button dynamically to end of page
 			$button.insertAfter(table).addClass('active');
